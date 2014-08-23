@@ -1,0 +1,53 @@
+bazinga_geocoder:
+    fake_ip:
+        ip: 33.33.33.11
+        priority: 128
+    adapter:
+        class: Geocoder\HttpAdapter\CurlHttpAdapter
+    providers:
+        bing_maps:
+            api_key: 123
+            locale: en_US
+        cache:
+            adapter: doctrine.apc.cache
+            provider: bing_maps
+            locale: en_US
+            lifetime: 86400
+        ip_info_db:
+            api_key: 123
+        cloudmade:
+            api_key: 123
+        google_maps:
+            locale: en_US
+            region: en_US
+            api_key: 123
+        google_maps_business:
+            client_id: 123
+            api_key: 123
+            locale: en_US
+            region: en_US
+        openstreetmap:
+            locale: en_US
+        host_ip: ~
+        # geoip: ~
+        free_geo_ip: ~
+        mapquest:
+            api_key: 123
+        oiorest: ~
+        geocoder_ca: ~
+        geocoder_us: ~
+        ign_openls:
+            api_key: 123
+        data_science_toolkit: ~
+        yandex:
+            locale: en-US
+            toponym: locality
+        geo_ips:
+            api_key: 123
+        geo_plugin: ~
+        maxmind:
+            api_key: 123
+        maxmind_binary:
+            binary_file: %fixtures_dir%/maxmind.dat
+        chain:
+            providers: [free_geo_ip, host_ip]

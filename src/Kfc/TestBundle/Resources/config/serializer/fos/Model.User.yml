@@ -1,0 +1,8 @@
+# ./src/Kfc/TestBundle/Rsources/config/serializer/fos
+FOS\UserBundle\Model\User:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+        username:
+            expose: true

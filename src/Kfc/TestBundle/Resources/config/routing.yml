@@ -1,0 +1,16 @@
+kfc_test_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: KfcTestBundle:Default:index }
+
+kfc_test_user_all:
+    pattern: /users
+    defaults: { _controller: KfcTestBundle:User:all, _format: ~}
+    requirements:
+        _method: GET
+
+kfc_test_user_get:
+    pattern: /users/{id}
+    defaults: { _controller: KfcTestBundle:User:get, _format: ~ }
+    requirements:
+        _method: GET
+        id: "\d+"

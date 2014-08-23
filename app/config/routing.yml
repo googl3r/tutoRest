@@ -1,0 +1,5 @@
+kfc_test:
+    resource: "@KfcTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
